@@ -1,0 +1,100 @@
+Goal=> . to make a study planner 
+       . should be easy to use; ineractive; visually appealling.
+
+features=> . To-Do list
+           . timetable
+           . pomodero
+           .timer
+           . progress tracker
+           . goals(reward)
+
+pages=>    . home -: contains intro => get started => to work
+           . features -: list of all the features => click n then go to the section
+           . about -: why need...
+
+enhancers=>. timer sound
+           . animation
+           . visual theme
+           
+
+UI – CSS Design Specs
+🖋️ Fonts Used:
+
+Purpose	Font Name	Google Fonts Link
+Headings	Montserrat	https://fonts.google.com/specimen/Montserrat
+Body Text	Inter	https://fonts.google.com/specimen/Inter
+Quotes / Notes	Caveat	https://fonts.google.com/specimen/Caveat
+
+How to import:
+
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Inter:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+
+🌈 Color Palette:
+Usage                   	Color Description	         Hex Code
+App Background	       Soft Mint Blue	        #e6f4f1
+Headings	              Deep Calm Blue	        #1b4965
+Primary Text (Body)	       Greenish Teal Blue	        #2c6e65
+List Bullet Icon (marker)	Muted Sky Blue	        #5fa8d3
+Quote/Note Background	Light Pastel Green	        #d0f4de
+Quote/Note Border	       Fresh Green	               #52b788
+Quote Text	              Calm Teal	               #355c4f
+Button Background	       Vibrant Aqua Blue	        #48cae4
+Button Hover Background	Deep Aqua Blue	        #3ab4d8
+Base Text Color	       Deep Blue	               #1e3a4c
+
+🧱 Other UI Elements:
+Border Radius for Buttons:          10px
+
+Button Shadow: box-shadow:          0 4px 10px rgba(0, 0, 0, 0.1)
+
+Button Hover Scale: transform:      scale(1.03)
+
+Note Quote Block:
+
+Font:               Caveat, cursive
+
+Padding:            12px 20px
+
+Border Left:        4px solid #52b788
+
+
+Home Page => 
+
+🌟 Hero Section	      App name (animated), subheading, CTA	    Jumbotron, custom container
+🔥 Key Features	      Cards or grid icons (3–4 features)	           Cards, Grid + Icons
+✍️ Motivational Quote      Quote with handwriting font (Caveat)	    Blockquote, custom style
+📋 Task Preview	      Mini checklist or timeline preview	           List group, Card
+
+
+ Animation Suggestions =>
+
+Element         Animation Style	     Use
+
+App Name	  fadeInDown, zoomIn	     Hero Section
+Features	  fadeInUp, bounceInUp    On scroll
+Button	         pulse, tada	            On hover
+Quote	         fadeIn, slideInLeft     Subtle emphasis
+
+
+🔹 LEFT SIDEBAR (Calendar + Events + Clock) =>
+Section	    Suggested Component	                                           Note
+📅 Calendar	   Use a plugin like FullCalendar, or create your own calendar grid	 Better than coding it manually
+📌 Event List    Bootstrap list-group	                                           Clean and scrollable list
+⏰ Clock	  Custom (JS + styled div)	                                          Use digital-style fonts
+
+
+🔹 CENTER SECTION (Welcome, Quote, To-do, Goals, Progress, Chatbot) =>
+Section	        Bootstrap Component       	      Notes
+👋 Welcome + Quote	 Use jumbotron or a card	     Personalize with user name
+✅ To-do List	       list-group or form-check	    Add checkbox with labels
+🎯 Long-term Goals	 card or accordion	            For collapsible display
+📈 Progress Bar	 progress component	            Bootstrap has built-in bars
+🤖 AI Chatbot         Footer fixed-bottom + custom    Style using chat-style cards
+
+
+🔹 RIGHT SIDEBAR (Pomodoro List with Time & Alarm Icon)
+Section	           Bootstrap Component	               Notes
+⏱️ Pomodoro Slots	    list-group with time badge	        Use bi-alarm icon
+🟦 Right Sidebar Design  Custom sidebar div with fixed width	 Distinct from center layout
